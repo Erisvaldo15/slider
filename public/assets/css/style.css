@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} 
+
+main {
+    padding: 1.5rem;
+    position: relative;
+    max-width: 90rem;
+}
+
+main .arrow-left, .arrow-right {
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1; /* poderia colocar um padding no main que também funcionaria */
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    color: #fff;
+    width: 4rem;
+    line-height: 40rem;
+    transition: all 400ms ease-in-out;
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+}
+
+.arrow-left {
+    text-align: left;
+    background: linear-gradient(to left, transparent 0%, rgb(255, 0, 0) 200%);
+}
+
+.arrow-right {
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, rgb(114, 253, 0) 200%);
+    left: auto;
+    right: 0;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    overflow-x: hidden;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.gallery .item {
+    width: 40rem;
+    height: 40rem;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: all 500ms ease-in-out;
+}
+
+.gallery .current-item {
+    border: 0.25rem solid rgb(255, 0, 0);
+    opacity: 1;
+}
+
+.pagination h4 {
+    font-size: 2rem;
+    text-align: center;
+}
