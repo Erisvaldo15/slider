@@ -1,4 +1,4 @@
-<h1 align="center"> Carrossel de Imagens </h1>
+<h1 align="center"> Slider </h1>
 
 <p align="center">
     Exercício simples para treinar CSS e Javascript.
